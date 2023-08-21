@@ -149,6 +149,7 @@ function oakmont_scripts() {
 	wp_enqueue_style('oakmont-animate', get_template_directory_uri() . '/assets/css/animate.min.css', array(), '20151215');
 	wp_enqueue_style('oakmont-slick', get_template_directory_uri() . '/assets/css/slick.css', array(), '20151215');
 	wp_enqueue_style('oakmont-slick-theme', get_template_directory_uri() . '/assets/css/slick-theme.css', array(), '20151215');
+	wp_enqueue_style('oakmont-datetimepicker-css', get_template_directory_uri() . '/assets/css/jquery.datetimepicker.min.css', array(), '20151215');
 	wp_enqueue_style('oakmont-fancybox-min', get_template_directory_uri() . '/assets/css/jquery.fancybox.min.css', array(), '20151215');
 	wp_enqueue_style('oakmont-simplebar-css', get_template_directory_uri() . '/assets/css/simplebar.css', array(), '20151215');
 	wp_enqueue_style('oakmont-sticky', get_template_directory_uri() . '/assets/css/sticky.css', array(), '20151215');
@@ -160,6 +161,7 @@ function oakmont_scripts() {
 	wp_enqueue_script('oakmont-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), '20151215', true);
 	wp_enqueue_script('oakmont-simplebar-js', get_template_directory_uri() . '/assets/js/simplebar.js', array(), '20151215', true);
 	wp_enqueue_script('oakmont-slick', get_template_directory_uri() . '/assets/js/slick.min.js', array(), '20151215', true);
+	wp_enqueue_script('oakmont-datetimepicker', get_template_directory_uri() . '/assets/js/jquery.datetimepicker.full.min.js', array(), '20151215', true);
 	wp_enqueue_script('oakmont-fancybox-min', get_template_directory_uri() . '/assets/js/jquery.fancybox.min.js', array(), '20151215', true);
 	wp_enqueue_script('oakmont-wow-min', get_template_directory_uri() . '/assets/js/wow.min.js', array(), '20151215', true);
 	wp_enqueue_script('oakmont-font-awesome-min', get_template_directory_uri() . '/assets/js/font-awesome.min.js', array(), '20151215', true);
@@ -222,6 +224,7 @@ function custom_testimonials_post() {
 		'labels' => $labels,
 		'description' => 'Holds testimonials and testimonial specific data',
 		'public' => true,
+		'exclude_from_search'   => true,
 		'menu_position' => 5,
 		'supports' => array( 'title', 'editor', 'thumbnail', 'excerpt', 'comments' ),
 		'has_archive' => true,
