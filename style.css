@@ -2138,24 +2138,20 @@ button.close:hover {
 /*========== Thank You Page CSS Start ==========*/
 .thank-text {
     text-align: center;
-    padding-top: 170px;
     position: relative;
 }
 
-.thank-text:before {
-    content: '';
-    position: absolute;
-    top: 0;
-    left: 50%;
-    transform: translate(-50%);
-    width: 147px;
-    height: 151px;
-    background-image: url('assets/images/thank-you.gif');
-    background-size: 100%;
-    background-position: center;
-    background-repeat: no-repeat;
-    border-radius: 10px;
-    overflow: hidden;
+.thanks-icon {
+    width: 100px;
+    display: block;
+    margin: 0 auto 40px;
+}
+
+.thanks-icon .checkmark {
+    stroke-dashoffset: 745.74853515625;
+    stroke-dasharray: 745.74853515625;
+    animation: dash 2.5s linear infinite;
+    stroke: var(--primary-color);
 }
 
 .thank-text h6 {
@@ -2936,12 +2932,9 @@ a.prev.page-numbers {
     .container-xxl {
         --container-space: calc(var(--gutter));
     }
-    .thank-text {
-        padding-top: 80px;
-    }
-    .thank-text:before {
-        width: 57px;
-        height: 61px;
+    .thanks-icon {
+        width: 80px;
+        margin: 0 auto 30px;
     }
     .privacy-content ol, 
     .privacy-content ul,
