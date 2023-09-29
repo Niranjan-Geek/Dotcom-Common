@@ -2154,6 +2154,15 @@ button.close:hover {
     stroke: var(--primary-color);
 }
 
+@keyframes dash {
+    0% {
+        stroke-dashoffset: 745.74853515625
+    }
+    100% {
+        stroke-dashoffset: 0
+    }
+}
+
 .thank-text h6 {
     font-size: 24px;
     line-height: 30px;
