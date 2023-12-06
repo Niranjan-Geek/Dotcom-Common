@@ -3,10 +3,10 @@
 <head>
 	<title>Common HTML</title>
 
-	<link rel="preload" href="<?php echo home_url();?>/wp-content/themes/elite-stone/assets/fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="<?php echo home_url();?>/wp-content/themes/elite-stone/assets/fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="<?php echo home_url();?>/wp-content/themes/elite-stone/assets/fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
-	<link rel="preload" href="<?php echo home_url();?>/wp-content/themes/elite-stone/assets/fonts/OpenSans-Light.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="<?php echo get_template_directory_uri();?>/assets/fonts/OpenSans-Bold.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="<?php echo get_template_directory_uri();?>/assets/fonts/OpenSans-SemiBold.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="<?php echo get_template_directory_uri();?>/assets/fonts/OpenSans-Regular.woff2" as="font" type="font/woff2" crossorigin>
+	<link rel="preload" href="<?php echo get_template_directory_uri();?>/assets/fonts/OpenSans-Light.woff2" as="font" type="font/woff2" crossorigin>
 
 </head>
 <body>
@@ -23,7 +23,7 @@
 				<div class="col-lg-9">					
 					<div class="header-menu">
 						<nav id="site-navigation" class="main-navigation">
-							<button class="menu-toggle" aria-controls="primary-menu" aria-expanded="false">
+							<button class="menu-toggle" type="button" name="Hamburger Menu" aria-controls="primary-menu" aria-expanded="false">
 								<span></span>
 								<span></span>
 								<span></span>
@@ -53,14 +53,14 @@
 				<div class="col-12">
 					<div class="footer-bottom-text">
 						<div class="copy-right">
-							<p>© <?php echo date('Y');?> Elite Stone Fabrication</p>
+							<p>© <?php echo date('Y');?> <?php echo get_bloginfo('name'); ?></p>
 						</div>
 						<div class="footer-bottom-link">
-							<ul>
-								<li><a href="<?php echo home_url();?>/privacy-policy" title="Privacy Policy">Privacy Policy</a></li>
-								<li><a href="<?php echo home_url();?>/terms-of-use" title="Terms of Service">Terms of Service</a></li>
-								<li><a href="<?php echo home_url();?>/cookie-policy" title="Cookies Policy">Cookies Policy</a></li>
-							</ul>
+							<?php
+								wp_nav_menu(array(
+									'theme_location' => 'policy-menu',
+								));
+							?>
 						</div>
 						<div class="footer-other-link">
 							<p>Web Design &amp; Digital Marketing with <span><i class="fa fa-heart" aria-hidden="true"></i></span> by <a href="https://www.dotcomdesign.com" target="_blank" title="Dotcom Design" class="dotcom-link">Dotcom Design</a></p>
@@ -73,12 +73,12 @@
 	<!-- Footer End -->
 
 	<!-- Scroll To Top Start -->
-	<a href="javascript:void(0);" id="scrollToTop" class="scrolltop" title="Back To Top"><i class="fas fa-angle-double-up"></i></a>
+	<button type="button"  id="scrollToTop" class="scrolltop" name="Back To Top"><i class="fas fa-angle-double-up"></i></button>
 	<!-- Scroll To Top End -->
 
 	<!-- CTA  Button Start -->
     <div class="cta-btn">
-        <a href="#" class="sec-btn" data-bs-toggle="modal" data-bs-target="#schedule_an_estimate_Modal" title="Schedule an Estimate"><span>Schedule an Estimate</span></a>
+        <button class="sec-btn" data-toggle="modal" data-target="#schedule_an_estimate_Modal" type="button" name="Schedule an Estimate"><span>Schedule an Estimate</span></button>
     </div>
     <!-- CTA  Button Start -->
 
@@ -88,7 +88,7 @@
 			<div class="modal-content">
 				<div class="popup-title">
 					<h2 class="h2-title">Schedule an <span>Estimate</span></h2>
-					<button type="button" class="close close-popup" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
+					<button type="button" class="close close-popup" name="Close Popup" data-bs-dismiss="modal"><i class="fas fa-times"></i></button>
 				</div>
 				<div class="common-popup-overflow">
 					<div class="common-popup-text" data-simplebar>
