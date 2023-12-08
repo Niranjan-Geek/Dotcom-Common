@@ -203,6 +203,18 @@ if ( defined( 'JETPACK__VERSION' ) ) {
 	require get_template_directory() . '/inc/jetpack.php';
 }
 
+/**
+ * Create an Options Menu Page for ACF settings.
+ */
+if (function_exists('acf_add_options_page')) {
+    acf_add_options_page(array(
+        'page_title'   => 'Options Settings',  // The title of the options page.
+        'menu_title'   => 'Options',            // The title shown in the WordPress admin menu.
+        'menu_slug'    => 'options-settings',   // The unique slug for the menu page.
+        'capability'   => 'edit_posts',         // The capability required to access the options page.
+        'redirect'     => false,                // Do not automatically redirect after adding the options page.
+    ));
+}
 
 function custom_testimonials_post() {
 	$labels = array(
