@@ -1,0 +1,48 @@
+.dropdown-menu-wp {
+    position: absolute;
+    top: 100%;
+    left: 0 !important;
+    float: none;
+    width: 300px;
+    background: var(--white-color);
+    box-shadow: 0 0 10px rgba(60, 140, 244, 0.15);
+    text-align: left;
+    padding-left: 0;
+    display: none;
+    opacity: 0;
+    width: 540px;
+    padding: 10px;
+}
+
+.main-navigation .dropdown-menu-wp ul li:hover>a {
+    background: transparent;
+    color: var(--primary-color);
+}
+
+.main-navigation .dropdown-menu-wp ul li.menu-item-has-children::after {
+    top: 12px;
+    right: 0;
+    transform: translate(0) rotate(0);
+}
+
+.main-navigation .dropdown-menu-wp ul li.menu-item-has-children:hover::after {
+    transform: translate(0) rotate(0deg);
+}
+
+.main-navigation .dropdown-menu-wp ul li.menu-item-has-children.active-child-menu::after {
+    transform: translate(0) rotate(180deg);
+}
+
+.main-navigation .dropdown-menu-wp .sub-menu {
+    display: none;
+    left: 0;
+    width: 100%;
+}
+
+.main-navigation ul li .dropdown-menu-wp ul li:hover::after {
+    transform: translate(0) rotate(0deg);
+}
+
+.main-navigation .dropdown-menu-wp ul ul li {
+    border: 0;
+}

@@ -50,8 +50,10 @@ if ( ! function_exists( 'oakmont_setup' ) ) :
 		// This theme uses wp_nav_menu() in one location.
 		register_nav_menus(
 			array(
-				'main-menu' => esc_html__( 'Primary', 'oakmont' ),
+				'main-menu' => esc_html__( 'Primary Menu', 'oakmont' ),
 				'footer-menu' => esc_html__( 'Footer Menu', 'oakmont' ),
+				'seo-menu' => esc_html__('Seo Menu', 'oakmont'),
+				'policy-menu' => esc_html__( 'Policy Menu', 'oakmont' ),
 			)
 		);
 
@@ -144,29 +146,22 @@ add_action( 'widgets_init', 'oakmont_widgets_init' );
  * Enqueue scripts and styles.
  */
 function oakmont_scripts() {
-
-	wp_enqueue_style('oakmont-bootstrap-min', get_template_directory_uri() . '/assets/css/bootstrap.min.css', array(), '20151215');
-	wp_enqueue_style('oakmont-animate', get_template_directory_uri() . '/assets/css/animate.min.css', array(), '20151215');
-	wp_enqueue_style('oakmont-slick', get_template_directory_uri() . '/assets/css/slick.css', array(), '20151215');
-	wp_enqueue_style('oakmont-slick-theme', get_template_directory_uri() . '/assets/css/slick-theme.css', array(), '20151215');
-	wp_enqueue_style('oakmont-datetimepicker-css', get_template_directory_uri() . '/assets/css/jquery.datetimepicker.min.css', array(), '20151215');
-	wp_enqueue_style('oakmont-fancybox-min', get_template_directory_uri() . '/assets/css/jquery.fancybox.min.css', array(), '20151215');
-	wp_enqueue_style('oakmont-simplebar-css', get_template_directory_uri() . '/assets/css/simplebar.css', array(), '20151215');
-	wp_enqueue_style('oakmont-sticky', get_template_directory_uri() . '/assets/css/sticky.css', array(), '20151215');
+	// wp_enqueue_style('magic-men-layout-css', get_template_directory_uri() . '/assets/css/layout.css', array(), '20151215');
+	wp_enqueue_style('oakmont-layout-min-css', get_template_directory_uri() . '/assets/css/layout.min.css', array(), '20151215');
+	wp_enqueue_style('oakmont-jquery-fancybox-min-css', get_template_directory_uri() . '/assets/css/jquery.fancybox.min.css', array(), '20151215');
 
 	wp_enqueue_style( 'oakmont-style', get_stylesheet_uri(), array(), _S_VERSION );
 	wp_enqueue_script('jquery');
 	wp_style_add_data( 'oakmont-style', 'rtl', 'replace' );
 
-	wp_enqueue_script('oakmont-bootstrap', get_template_directory_uri() . '/assets/js/bootstrap.min.js', array(), '20151215', true);
+	wp_enqueue_script('oakmont-layout-js', get_template_directory_uri() . '/assets/js/layout.js', array(), '20151215', true);
+	wp_enqueue_script('oakmont-slick-min-js', get_template_directory_uri() . '/assets/js/slick.min.js', array(), '20151215', true);
 	wp_enqueue_script('oakmont-simplebar-js', get_template_directory_uri() . '/assets/js/simplebar.js', array(), '20151215', true);
-	wp_enqueue_script('oakmont-slick', get_template_directory_uri() . '/assets/js/slick.min.js', array(), '20151215', true);
-	wp_enqueue_script('oakmont-datetimepicker', get_template_directory_uri() . '/assets/js/jquery.datetimepicker.full.min.js', array(), '20151215', true);
-	wp_enqueue_script('oakmont-fancybox-min', get_template_directory_uri() . '/assets/js/jquery.fancybox.min.js', array(), '20151215', true);
-	wp_enqueue_script('oakmont-wow-min', get_template_directory_uri() . '/assets/js/wow.min.js', array(), '20151215', true);
-	wp_enqueue_script('oakmont-font-awesome-min', get_template_directory_uri() . '/assets/js/font-awesome.min.js', array(), '20151215', true);
-	wp_enqueue_script('oakmont-custom', get_template_directory_uri() . '/assets/js/custom.js', array(), rand(1000, 10000), true);
-	wp_localize_script('oakmont-custom', 'custom_call', ['ajaxurl' => admin_url('admin-ajax.php'), 'homeurl' => home_url()]);
+	wp_enqueue_script('oakmont-jquery-fancybox-min-js', get_template_directory_uri() . '/assets/js/jquery.fancybox.min.js', array(), '20151215', true);
+	wp_enqueue_script('oakmont-Custome-js', get_template_directory_uri() . '/assets/js/custom.js', array(), '20151215', true);
+	wp_localize_script('oakmont-Custome-js', 'custom_call', ['ajaxurl' => admin_url('admin-ajax.php'), 'homeurl' => home_url()]);
+	wp_enqueue_script('oakmont-navigation-js', get_template_directory_uri() . '/js/navigation.js', array(), '20151215', true);
+
 
 	wp_enqueue_script( 'oakmont-navigation', get_template_directory_uri() . '/js/navigation.js', array(), _S_VERSION, true );
 
@@ -256,10 +251,12 @@ function change_html_custom_logo() {
             wp_get_attachment_image( $custom_logo_id, 'full', false, array(
                 'class'    => 'custom-logo',
 				"data-no-lazy" => "1",
+				'alt'  => $site_name,
             ) )
         );
     return $html;   
 }
+<<<<<<< HEAD
 
 
 /**
@@ -304,3 +301,5 @@ function gallery_image_tabbing() {
 
 die;
 }
+=======
+>>>>>>> dev
