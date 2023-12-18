@@ -215,9 +215,10 @@ jQuery(document).ready(function ($) {
     });
     
     /** Page Scroll JS */
+    let scrollOffset = 100;
     if(window.location.hash){
         // smooth scroll to the anchor id
-        var scrollOffset = 100;
+        
         jQuery('html,body').animate({
             scrollTop:jQuery(window.location.hash).offset().top - scrollOffset
             });
