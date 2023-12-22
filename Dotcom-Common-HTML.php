@@ -101,6 +101,21 @@
 		</div>
 	</div>
 	<!-- Modal End -->
+
+	<!-- Contact Form 7 HTML structure Start -->
+		<!-- For Select Tag -->
+		<div class="form-element">[select* menu-573 class:form-select select-hidden flooring-input class:form-input first_as_label "Select Service*" "Carpet Cleaning" "Upholstery Cleaning" "Tile & Grout Cleaning" "Other"]<i aria-hidden="true" class="fa fa-chevron-down"></i></div>
+		<!-- For Select Tag -->
+
+		<!-- Submit Button -->
+		<div class="submit-btn">[submit class:sec-btn "Submit"]</div>
+		<!-- Submit Button -->
+
+		<!-- File Upload -->
+		<div class="form-box form-input-file">[file* file-509]<span class="input-file-icon"></span><span class="input-file-text"></span></div>
+		<!-- File Upload -->
+
+	<!-- Contact Form 7 HTML structure End -->
 	
 </body>
 </html>
