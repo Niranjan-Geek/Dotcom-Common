@@ -569,7 +569,7 @@ a:hover {
     color: var(--white-color);
 }
 
-.main-navigation ul li.menu-item-has-children>a::after {
+.main-navigation ul li.menu-item-has-children::after {
     content: "\f078";
     position: absolute;
     top: 55%;
