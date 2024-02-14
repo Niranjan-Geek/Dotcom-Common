@@ -6657,7 +6657,7 @@ span.wpcf7-list-item,
 .white-text h6,
 .white-text ul li,
 .white-text label,
-.white-text span:not(.wpcf7-form-control-wrap) {
+.white-text span:not(.wpcf7-form-control-wrap):not(.sec-btn span) {
     color: var(--white-color);
 }
 
