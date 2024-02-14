@@ -892,7 +892,8 @@ button.close:hover {
     color: var(--primary-color);
 }
 
-.privacy-content p a:hover .privacy-content a:hover,
+.privacy-content p a:hover,
+.privacy-content a:hover,
 .entry-content p a:hover,
 .entry-content a:hover {
     color: var(--dark-color);
@@ -979,6 +980,22 @@ button.close:hover {
     line-height: 30px;
     font-weight: 500;
     color: var(--primary-color);
+}
+
+.main-seo-content .excerpt-content {
+    max-height: 325px;
+    position: relative;
+}
+
+.main-seo-content .excerpt-content:not([style*="max-height: unset;"]):before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 120px;
+    bottom: 0;
+    left: 0;
+    background: linear-gradient(to top, white, transparent);
+    pointer-events: none;
 }
 
 /*========== SEO Page CSS End ==========*/
