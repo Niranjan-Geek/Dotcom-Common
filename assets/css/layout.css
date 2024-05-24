@@ -2717,7 +2717,7 @@ span.wpcf7-list-item,
     max-height: 80vh;
     overflow: auto;
     overflow-x: hidden;
-    scrollbar-color: transparent transparent;
+    scrollbar-width: none;
 }
 
 .common-popup-text::-webkit-scrollbar {
@@ -2941,7 +2941,7 @@ span.wpcf7-list-item,
 .overflow-text {
     height: 300px;
     -webkit-overflow-scrolling: touch;
-    scrollbar-color: transparent transparent;
+    scrollbar-width: none;
 }
 
 .overflow-text::-webkit-scrollbar,
@@ -7148,7 +7148,7 @@ a.prev.page-numbers {
         height: 100vh;
         overflow: auto;
         opacity: 0;
-        scrollbar-color: transparent transparent;
+        scrollbar-width: none;
         transition: .5s;
         z-index: 101;
     }
@@ -7511,7 +7511,7 @@ a.prev.page-numbers {
 
 [data-simplebar=init] {
     padding-right: 10px;
-    scrollbar-color: transparent transparent;
+    scrollbar-width: none;
 }
 
 .simplebar-scroll-content {
