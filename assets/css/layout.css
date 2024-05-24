@@ -2566,11 +2566,11 @@ span.wpcf7-list-item,
 }
 
 .menu-des {
-    display: inline-block;
+    display: inline-block !important;
 }
 
 .menu-mob {
-    display: none;
+    display: none !important;
 }
 
 .container {
@@ -7124,11 +7124,11 @@ a.prev.page-numbers {
     }
 
     .menu-des {
-        display: none;
+        display: none !important;
     }
 
     .menu-mob {
-        display: block;
+        display: block !important;
     }
 
     .widget-area,
